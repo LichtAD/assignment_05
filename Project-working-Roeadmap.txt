@@ -9,7 +9,21 @@ Required Task:     ✅     👉      🚀      💡
 
 4. footer color ✅
 
-6. Blog page -> another html page
+6. Blog page -> another html page ✅
+
+7. history part ✅
+
+🚀 JS part 
+
+    👉 history click krle only history part dekhabe (color change hbe btn er)
+
+    👉 amount input dle add hbe oi box er amount e, nav er amount thk subtract hbe
+
+    👉 no neg amount allowed, only number is allowed
+
+    👉 blog btn e click krle blog html dekhabe and home button diye replace hbe
+
+    👉 for basic, donate now btn e click krle alert success dekhabe
 
 7. Challenge
 

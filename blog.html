@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/9b30043c70.js" crossorigin="anonymous"></script>
+    <!-- tailwind + daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        nav_bg: '#F9F7F3',
+                        color_lime: '#B4F461',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="fixed top-0 left-0 right-0 z-10">
+        <!-- ! navbar part -->
+        <nav class="flex justify-between items-center bg-nav_bg px-3 lg:px-16 py-6">
+            <div class="flex gap-4">
+                <button class="bg-lime-300 p-4 font-bold btn btn-md">Blog</button>
+                <button class="bg-lime-300 p-4 font-bold btn btn-md hidden">Home</button>
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-4">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="font-bold text-center">Donate Bangladesh</h1>
+            </div>
+
+            <div class="flex justify-center items-center gap-2">
+                <img src="./assets/coin.png" alt="">
+                <p><span>5500</span> BDT</p>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ! Collapse Part -->
+    <div class="lg:mt-32 mt-48 mb-10 space-y-4 w-11/12 mx-auto">
+
+        <div class="flex gap-4">
+            <h1 class="text-3xl font-bold mb-8">Important FAQ</h1>
+            <i class="fa-regular fa-circle-question"></i>
+        </div>
+
+        <div tabindex="0" class="collapse collapse-arrow border-2">
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page
+                    so that programs can change the document structure, style, and content.
+                </p>
+            </div>
+        </div>
+
+        <div tabindex="0" class="collapse collapse-arrow border-2">
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>To select an element from the DOM, we can use getElementById(), getElementsByClassName(),
+                    getElementsByTagName(), querySelector() and querySelectorAll() etc.</p>
+            </div>
+        </div>
+
+        <div tabindex="0" class="collapse collapse-arrow border-2">
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of DOM and why is it
+                useful?</div>
+            <div class="collapse-content">
+                <p>Event delegation allows you to attach a single event listener to a parent element and handle events
+                    on its child elements through event bubbling. This is useful for managing many dynamic elements
+                    efficiently and reducing memory usage.</p>
+            </div>
+        </div>
+
+        <div tabindex="0" class="collapse collapse-arrow border-2">
+            <div class="collapse-title text-xl font-medium">How do you manipulate an events attribute and styles using
+                the DOM?</div>
+            <div class="collapse-content">
+                <p>To manipulate events, use addEventListener() or assign event handlers
+                    directly (e.g., element.onclick = function() {}). For styles,
+                    modify the style property (e.g., element.style.color = 'blue';).
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
