@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- tailwind + daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        nav_bg: '#F9F7F3',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- ! navbar -->
+    <nav class="flex justify-between items-center bg-nav_bg px-16 py-6">
+        <div class="flex gap-4">
+            <button class="bg-lime-300 p-4 font-bold btn btn-md">Blog</button>
+            <button class="bg-lime-300 p-4 font-bold btn btn-md hidden">Home</button>
+        </div>
+
+        <div class="flex justify-center items-center gap-4">
+            <img src="./assets/logo.png" alt="">
+            <h1 class="font-bold">Donate Bangladesh</h1>
+        </div>
+
+        <div class="flex justify-center items-center gap-2">
+            <img src="./assets/coin.png" alt="">
+            <p><span>5500</span> BDT</p>
+        </div>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

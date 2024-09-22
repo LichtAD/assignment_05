@@ -1,0 +1,32 @@
+Required Task:     ✅     👉      🚀      💡
+--------------------------------------------------------
+
+1. navbar 
+   
+2. Button
+
+3. Card 3 ta
+
+4. footer color
+
+6. Blog page -> another html page
+
+7. Challenge
+
+   👉 mobile responsive korte hbe -> watch the video again
+
+   👉 button color change for donation and history
+
+   👉 home button e click krle home and blog button e click krle onno ekta page e niye jabe (FAQ) -> watch the video again
+
+   👉 tene niche namale (navbar + button) sticky top kore dte hbe
+
+   👉 donate now button e click krle modal dekhate hbe
+
+   👉 ekta common function thaka lagbe
+    
+
+
+question:
+1. multiple
+
