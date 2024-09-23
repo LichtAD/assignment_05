@@ -11,18 +11,12 @@ const hiddenHistory = document.getElementById('hidden_history');
 // ! change html page
 btnBlog.addEventListener('click', function () {
     window.location.href = '/blog.html';
-
-    btnBlog.classList.toggle("hidden");
-    btnHome.classList.toggle("hidden");
 });
 
 
-btnHome.addEventListener('click', function () {
-    window.location.href = '/index.html';
-
-    btnBlog.classList.remove('hidden');
-    btnHome.classList.add('hidden');
-});
+// btnHome.addEventListener('click', function () {
+//     window.location.href = '/index.html';
+// });
 
 
 // ! noakhali
@@ -33,9 +27,24 @@ noaDonation.addEventListener('click', function () {
     const noaAmount = getInputFieldValueById('input_noa');
     // console.log(noaAmount);
 
-    if (isNaN(noaAmount) == true || noaAmount <= 0) {
-        return alert('Invalid Donation Amount');
+    const check = document.getElementById('input_noa').value;
+    // console.log(check);
+    // console.log(noaAmount);
+    if (check != noaAmount){
+        alert('Invalid Donation Amount');
+        return; 
     }
+
+    if (isNaN(noaAmount) == true || noaAmount <= 0 || noaAmount[0] == '-') {
+        alert('Invalid Donation Amount');
+        return; 
+    }
+
+    // ----------------------------------------------------------------
+    // ! show modal
+    // noaDonation.setAttribute('onclick', 'my_modal_1.showModal()');
+
+    // ----------------------------------------------------------------
 
     const initialDonation = getTextFieldValueById('initial_noa_donation');
     // console.log(initialDonation);
@@ -46,11 +55,28 @@ noaDonation.addEventListener('click', function () {
     const my_present_money = myMoney - noaAmount;
     // console.log(my_present_money);
 
+    if(my_present_money < 0) {
+        alert('You do not have enough Amount');
+        return; 
+    }
+
     document.getElementById('initial_noa_donation').innerText = totalDonation;
     document.getElementById('my_money').innerText = my_present_money;
 
     // ! add history
-    
+    const historyItem = document.createElement("div");
+    historyItem.className = 'p-6 border-2 rounded-xl space-y-2';
+    historyItem.setAttribute('id', 'history_container');
+
+    historyItem.innerHTML = `
+        <h1 class="font-bold">${noaAmount} Taka is Donated for Flood Relief in Noakhali, Bangladesh</h1>
+        <p class="text-xs">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
+    `
+
+    // console.log(historyItem);
+    const historyContainer = document.getElementById("history_container");
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
 });
 
 
@@ -62,8 +88,17 @@ feniDonation.addEventListener('click', function () {
     const feniAmount = getInputFieldValueById('input_feni');
     // console.log(feniAmount);
 
-    if (isNaN(feniAmount) == true || feniAmount <= 0) {
-        return alert('Invalid Donation Amount');
+    const check = document.getElementById('input_feni').value;
+    // console.log(check);
+    // console.log(noaAmount);
+    if (check != feniAmount){
+        alert('Invalid Donation Amount');
+        return; 
+    }
+
+    if (isNaN(feniAmount) == true || feniAmount <= 0 || feniAmount[0] == '-') {
+        alert('Invalid Donation Amount');
+        return; 
     }
 
     const initialDonation = getTextFieldValueById('initial_feni_donation');
@@ -75,8 +110,28 @@ feniDonation.addEventListener('click', function () {
     const my_present_money = myMoney - feniAmount;
     // console.log(my_present_money);
 
+    if(my_present_money < 0) {
+        alert('You do not have enough Amount');
+        return; 
+    }
+
     document.getElementById('initial_feni_donation').innerText = totalDonation;
     document.getElementById('my_money').innerText = my_present_money;
+
+
+    // ! add history
+    const historyItem = document.createElement("div");
+    historyItem.className = 'p-6 border-2 rounded-xl space-y-2';
+    historyItem.setAttribute('id', 'history_container');
+
+    historyItem.innerHTML = `
+        <h1 class="font-bold">${feniAmount} Taka is Donated for Flood Relief in Feni, Bangladesh</h1>
+        <p class="text-xs">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
+    `
+
+    // console.log(historyItem);
+    const historyContainer = document.getElementById("history_container");
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 });
 
 
@@ -88,8 +143,17 @@ quotaDonation.addEventListener('click', function () {
     const quotaAmount = getInputFieldValueById('input_quota');
     // console.log(quotaAmount);
 
-    if (isNaN(quotaAmount) == true || quotaAmount <= 0) {
-        return alert('Invalid Donation Amount');
+    const check = document.getElementById('input_quota').value;
+    // console.log(check);
+    // console.log(noaAmount);
+    if (check != quotaAmount){
+        alert('Invalid Donation Amount');
+        return; 
+    }
+
+    if (isNaN(quotaAmount) == true || quotaAmount <= 0 || quotaAmount[0] == '-') {
+        alert('Invalid Donation Amount');
+        return; 
     }
 
     const initialDonation = getTextFieldValueById('initial_quota_donation');
@@ -101,8 +165,28 @@ quotaDonation.addEventListener('click', function () {
     const my_present_money = myMoney - quotaAmount;
     // console.log(my_present_money);
 
+    if(my_present_money < 0) {
+        alert('You do not have enough Amount');
+        return; 
+    }
+
     document.getElementById('initial_quota_donation').innerText = totalDonation;
     document.getElementById('my_money').innerText = my_present_money;
+
+
+    // ! add history
+    const historyItem = document.createElement("div");
+    historyItem.className = 'p-6 border-2 rounded-xl space-y-2';
+    historyItem.setAttribute('id', 'history_container');
+
+    historyItem.innerHTML = `
+        <h1 class="font-bold">${quotaAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h1>
+        <p class="text-xs">Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()} (Bangladesh Standard Time)</p>
+    `
+
+    // console.log(historyItem);
+    const historyContainer = document.getElementById("history_container");
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 });
 
 

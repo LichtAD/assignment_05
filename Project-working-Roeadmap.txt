@@ -23,7 +23,9 @@ Required Task:     ✅     👉      🚀      💡
 
     👉 no neg amount allowed, only number is allowed ✅
 
-    👉 add history for every donation 
+    👉 donation amount nijer money thk beshi hote parbe na ✅
+
+    👉 add history for every donation ✅
 
 7. Challenge
 
@@ -37,15 +39,14 @@ Required Task:     ✅     👉      🚀      💡
 
     👉 donate now button e click krle modal dekhate hbe ✅
 
-    👉 home button e click krle home and blog button e click krle onno ekta page e niye jabe (FAQ) -> watch the video again 
+    👉 home button e click krle home and blog button e click krle onno ekta page e niye jabe (FAQ) -> watch the video again ✅
     
 
 
 Problem:
 
-1. home button show kore na, blog hidden hoi na 
+1. home button show kore na, blog hidden hoi na ✅
 
 2. blog page e footer last e jai na ✅
 
 3. showing modal even in invalid input 
-
