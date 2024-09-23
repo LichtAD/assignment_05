@@ -40,11 +40,8 @@ noaDonation.addEventListener('click', function () {
         return; 
     }
 
-    // ----------------------------------------------------------------
-    // ! show modal
-    // noaDonation.setAttribute('onclick', 'my_modal_1.showModal()');
-
-    // ----------------------------------------------------------------
+    // ! show modal only for valid inputs
+    my_modal_1.showModal();
 
     const initialDonation = getTextFieldValueById('initial_noa_donation');
     // console.log(initialDonation);
@@ -101,6 +98,9 @@ feniDonation.addEventListener('click', function () {
         return; 
     }
 
+    // ! show modal only for valid inputs
+    my_modal_2.showModal();
+
     const initialDonation = getTextFieldValueById('initial_feni_donation');
     // console.log(initialDonation);
 
@@ -155,6 +155,9 @@ quotaDonation.addEventListener('click', function () {
         alert('Invalid Donation Amount');
         return; 
     }
+
+    // ! show modal only for valid inputs
+    my_modal_3.showModal();
 
     const initialDonation = getTextFieldValueById('initial_quota_donation');
     // console.log(initialDonation);

@@ -49,4 +49,4 @@ Problem:
 
 2. blog page e footer last e jai na ✅
 
-3. showing modal even in invalid input 
+3. showing modal even in invalid input ✅
