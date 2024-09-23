@@ -10,7 +10,8 @@ const hiddenHistory = document.getElementById('hidden_history');
 
 // ! change html page
 btnBlog.addEventListener('click', function () {
-    window.location.href = '/blog.html';
+    // window.location.href = '/blog.html';
+    window.location.href = 'https://lichtad.github.io/assignment_05/blog.html';
 });
 
 
